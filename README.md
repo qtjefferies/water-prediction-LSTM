@@ -1,45 +1,22 @@
-<!-- hide -->
-# Time series - Step by step guide
-<!-- endhide -->
 
-- Understand a new dataset.
-- Analyze the time series and study its characteristics.
-- Train a model to predict the amount of water in different areas.
+### Water Detection System
+This project focuses on building a predictive model for water detection using the Kaggle platform. Kaggle provides a competitive environment for data science enthusiasts to test and improve their modeling skills through various challenges.
 
-## 🌱 How to start this project
+### Overview
+The goal of this project is to predict water availability, leveraging the dataset and competition setup provided by the closed Kaggle competition Acea Water Prediction. Although the competition is closed, participants can still upload their solutions and benchmark their models against others.
 
-Follow the instructions below:
+The Acea Group is one of the leading Italian multiutility operators. Listed on the Italian Stock Exchange since 1999, the company manages and develops water and electricity networks and environmental services. Acea is the foremost Italian operator in the water services sector supplying 9 million inhabitants in Lazio, Tuscany, Umbria, Molise, Campania.
 
-1. Create a new repository based on [machine learning project](https://github.com/4GeeksAcademy/machine-learning-python-template) by [clicking here](https://github.com/4GeeksAcademy/machine-learning-python-template/generate).
-2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
-3. Once the Codespace VSCode has finished opening, start your project by following the instructions below.
+In this competition we will focus only on the water sector to help Acea Group preserve precious waterbodies. As it is easy to imagine, a water supply company struggles with the need to forecast the water level in a waterbody (water spring, lake, river, or aquifer) to handle daily consumption. During fall and winter waterbodies are refilled, but during spring and summer they start to drain. To help preserve the health of these waterbodies it is important to predict the most efficient water availability, in terms of level and water flow for each day of the year.
 
-## 🚛 How to deliver this project
+### Data
+The reality is that each waterbody has such unique characteristics that their attributes are not linked to each other. This analytics competition uses datasets that are completely independent from each other. However, it is critical to understand total availability in order to preserve water across the country.
 
-Once you have finished solving the exercises, be sure to commit your changes, push them to your repository, and go to 4Geeks.com to upload the repository link.
+Each dataset represents a different kind of waterbody. As each waterbody is different from the other, the related features are also different. So, if for instance we consider a water spring we notice that its features are different from those of a lake. These variances are expected based upon the unique behavior and characteristics of each waterbody. The Acea Group deals with four different type of waterbodies: water springs, lakes, rivers and aquifers.
 
-## 📝 Instructions
+### Challenge
+Can you build a model to predict the amount of water in each unique waterbody? The challenge is to determine how features influence the water availability of each presented waterbody. To be more straightforward, gaining a better understanding of volumes, they will be able to ensure water availability for each time interval of the year.
 
-### Water detection system
+The time interval is defined as day/month depending on the available measures for each waterbody. Models should capture volumes for each waterbody(for instance, for a model working on a monthly interval a forecast over the month is expected).
 
-This project is going to be done at [Kaggle](https://www.kaggle.com/). Kaggle is known for organizing data science competitions in which individuals and teams can compete to create the best model on a variety of tasks.
-
-Specifically, we will explore a competition that has now ended, which rewarded the top performers with $25,000, distributed to the top four solutions.
-
-#### Step 1: Register or log in to Kaggle
-
-The first step to participate in a competition is to have a Kaggle account. Registration is very simple and versatile.
-
-#### Step 2: Participate in the competition
-
-Although it is closed, you can still upload your solutions and compare yourself with the rest of the competitors in the ranking. By clicking [here](https://www.kaggle.com/competitions/acea-water-prediction), you can access the competition, where the purpose is to predict the amount of water.
-
-Read the information about the problem description, evaluation metrics, timeline and prizes. Once you have an overview of the competition, prepare the notebook with the code development and upload it. Compare yourself with the other developers.
-
-Follow these tips:
-
-- Look at the solutions proposed by other developers. Some use time series, others use supervised algorithms such as linear regression, decision trees, etc. Investigate which model might work best for this use case and explore all options.
-- Whatever model you choose, be sure to process and explore the data as studied in past modules.
-- Trial and error! Don't pretend to get the best model the first time, keep trying.
-
-> Note: We also incorporated the solution samples on `./solution.ipynb` that we strongly suggest you only use if you are stuck for more than 30 min or if you have already finished and want to compare it with your approach.
+The desired outcome is a notebook that can generate four mathematical models, one for each category of waterbody (acquifers, water springs, river, lake) that might be applicable to each single waterbody.
